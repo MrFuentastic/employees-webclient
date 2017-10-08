@@ -1,7 +1,11 @@
 class EmployeesController < ApplicationController
 
+  def index
+    @employees = Employee.all
+  end
+
   def show
-    @employee = Unirest.get("localhost:3000/api/v2/employees/#{params[:id]}.json").body
+    @employee = find(params[:id])
     
   end
 end

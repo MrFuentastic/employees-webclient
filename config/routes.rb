@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-  get '/' => 'employees#index'
+  get '/employees' => 'employees#index'
   get '/employees/:id' => 'employees#show'
   get '/employees/new' => 'employees#new'
   post '/employees' => 'employees#create'
